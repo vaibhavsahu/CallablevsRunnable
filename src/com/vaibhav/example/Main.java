@@ -13,7 +13,7 @@ public class Main {
         executorServiceForRunnable.shutdown();
 
         ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Future<Integer> future = executorService.submit(new FactorialTask(5));
+        Future<Integer> future = executorService.submit(new FactorialTask(-9));
         System.out.println(future.get().intValue());
         executorService.shutdown();
 
